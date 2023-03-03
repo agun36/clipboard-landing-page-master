@@ -1,0 +1,59 @@
+@import 'variable';
+
+header {
+  background-image: url('../images/bg-header-mobile.png');
+  background-position: center center;
+  background-size: cover;
+  nav {
+    @include col-1();
+    @include container();
+    text-align: center;
+    padding: 5rem;
+    max-width: 1000px;
+    margin: auto;
+    .logo {
+      margin: auto;
+    }
+    h1 {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .header-text {
+      font-size: 1.2rem;
+      padding: 20px 0;
+      font-family: sans-serif;
+      line-height: 2rem;
+      text-align: center;
+      opacity: 0.4;
+    }
+    .col-group {
+      form {
+        @include col-1();
+
+        @media (min-width: 767px) {
+          @include col-2();
+        }
+        .ios-btn {
+          background-color: $Strong-Cyan;
+          padding: 0.5rem;
+          border-radius: 30px;
+          border: 0;
+          color: white;
+        }
+        .ios-btn:is(:hover, :focus) {
+          background-color: $Dark-Grayish-Blue;
+        }
+        .btn-mac {
+          background-color: $Light-Blue;
+          padding: 0.5rem;
+          border-radius: 30px;
+          border: 0;
+          color: white;
+        }
+        .btn-mac:is(:hover, :focus) {
+          background-color: $Grayish-Blue;
+        }
+      }
+    }
+  }
+}

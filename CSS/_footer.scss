@@ -1,0 +1,50 @@
+@import 'variable';
+footer {
+  background-color: $Grayish-Blue;
+  .footer-container {
+    @include col-1();
+    gap: 2rem;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+    .footer-list {
+      .footer-links {
+        @include col-1();
+        @media (min-width: 767px) {
+          grid-template-columns: 100px 100px 100px;
+          gap: 1rem;
+          text-align: left;
+        }
+
+        a {
+          color: $Dark-Grayish-Blue;
+        }
+      }
+      @media (min-width: 767px) {
+        margin-bottom: auto;
+      }
+    }
+    .media-icon {
+      .icon-list {
+        @include col-3();
+        gap: 1rem;
+        li {
+          .fa-brands,
+          .fa {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      @media (min-width: 767px) {
+        margin-bottom: auto;
+      }
+    }
+    @media (min-width: 767px) {
+      @include col-3();
+      padding: 3rem;
+    }
+  }
+}

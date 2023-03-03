@@ -1,0 +1,44 @@
+@import 'variable';
+
+.superchange {
+  .superchange-container {
+    @include col-1();
+    @include container();
+    padding-block: 2rem;
+    .superchange-text {
+      margin-bottom: 3rem;
+      text-align: center;
+      p {
+        opacity: 0.4;
+      }
+    }
+    h5 {
+      font-size: 1.4rem;
+    }
+    .superchange-workflow_items {
+      @include col-1;
+      text-align: center;
+      place-items: center;
+      gap: 4rem;
+      padding: 1.4rem;
+      img {
+        margin: 40px auto;
+      }
+      p {
+        opacity: 0.4;
+        margin-top: 20px;
+      }
+      @media (min-width: 767px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .company-logos {
+      @include col-1;
+      place-items: center;
+      gap: 4rem;
+      @media (min-width: 767px) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  }
+}

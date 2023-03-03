@@ -1,0 +1,50 @@
+@mixin flex-direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-row {
+  display: flex;
+}
+@mixin col-1 {
+  display: grid;
+  gap: 1.2rem;
+}
+@mixin col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@mixin col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@mixin container {
+  margin-inline: auto;
+  max-width: 1400px;
+
+  @media screen and (max-width: 1500px) {
+    max-width: 1300px;
+  }
+  @media screen and (max-width: 1400px) {
+    max-width: 1200px;
+  }
+  @media screen and (max-width: 1350px) {
+    max-width: 1000px;
+  }
+  @media screen and (max-width: 1050px) {
+    max-width: 800px;
+  }
+  @media screen and (max-width: 850px) {
+    max-width: 600px;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 100%;
+    padding: 2rem;
+  }
+}
